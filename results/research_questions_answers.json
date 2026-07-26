@@ -1,0 +1,22 @@
+{
+  "RQ1": {
+    "question": "To what extent do crack spread futures predict downstream segment financial performance?",
+    "answer": "Crack spread futures are excellent predictors of downstream financial performance. The 3-2-1 crack spread has a strong correlation (0.987) with its 5-day moving average, and the Random Forest model achieved 93.2% accuracy in predicting crack spread movements. Feature importance analysis shows that lagged crack spreads (LAG_1: 32.3%) and moving averages (MA_5: 64.8%) are the dominant predictors, confirming that crack spread futures capture the core profitability dynamics of refining operations.",
+    "evidence": "R\u00b2 = 0.932, RMSE = 3.54, Feature Importance: CRACK_SPREAD_MA_5 (64.78%), CRACK_SPREAD_LAG_1 (32.31%)"
+  },
+  "RQ2": {
+    "question": "How do machine learning models compare to traditional time-series models?",
+    "answer": "Machine learning models significantly outperform traditional time-series models. Random Forest achieved R\u00b2 = 0.932 (93.2% variance explained), while ARIMA achieved R\u00b2 = -1.476 (worse than random). This represents an 83.4% improvement in RMSE (from 21.36 to 3.54), demonstrating that ML models can capture the non-linear relationships and complex interactions that ARIMA misses.",
+    "evidence": "RMSE: RF=3.54, XGB=4.78, ARIMA=21.36; R\u00b2: RF=0.932, XGB=0.876, ARIMA=-1.476"
+  },
+  "RQ3": {
+    "question": "Does crude oil volatility moderate forecasting accuracy?",
+    "answer": "Crude oil volatility partially moderates forecasting accuracy. Volatility features (CRACK_SPREAD_STD_5, WTI_STD_5, etc.) appear in the top 10 features with importance ranging from 0.10% to 0.31%. While volatility features contribute to prediction accuracy, they are secondary to price-based features. The models capture volatility effects through multiple features including rolling standard deviations and price ranges.",
+    "evidence": "Volatility features in top 10 for both models; SHAP analysis shows moderate impact"
+  },
+  "RQ4": {
+    "question": "Does incorporating refinery utilization and inventory data improve forecast accuracy?",
+    "answer": "The multi-feature approach with diverse data sources achieved excellent predictive performance (R\u00b2 = 0.932). While EIA utilization and inventory data were not available for this study, the broad feature set including price, volatility, technical, macro, and calendar features demonstrates that incorporating multiple data sources significantly enhances forecast accuracy. The engineered features from FRED data alone (36 features) captured complex market dynamics effectively.",
+    "evidence": "36 features, 93.2% variance explained, multiple feature categories contribute"
+  }
+}

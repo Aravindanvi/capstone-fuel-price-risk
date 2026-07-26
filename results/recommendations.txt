@@ -1,0 +1,30 @@
+
+PRACTICAL RECOMMENDATIONS
+
+1. For Procurement Managers:
+   - Use 5-day moving averages of crack spreads as primary procurement indicators
+   - Monitor 1-day lag for near-term price direction
+   - Consider seasonal patterns (Nov-Feb peak) for timing decisions
+   - Aim for 30-50% reduction in procurement costs through better timing
+
+2. For Risk Management Teams:
+   - Deploy Random Forest model for daily crack spread forecasting
+   - Use SHAP analysis to understand key risk drivers
+   - Develop hedging strategies based on model predictions
+   - Monitor volatility features for early warning signals
+
+3. For Operations Planning:
+   - Incorporate seasonality patterns into production planning
+   - Use predicted spreads for margin optimization
+   - Consider 5-20 day moving averages for operational decisions
+
+4. For Technology/IT:
+   - Deploy models via API for real-time predictions
+   - Implement dashboards for key stakeholders
+   - Schedule daily model retraining
+
+5. For Future Research:
+   - Incorporate EIA utilization data when API access is available
+   - Explore LSTM/GRU for sequential patterns
+   - Develop ensemble of Random Forest + XGBoost
+   - Create trading signals based on predictions

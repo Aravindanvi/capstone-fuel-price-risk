@@ -1,0 +1,1 @@
+{"model": "ARIMA", "order": {"trend": 0, "exog": 0, "ar": 5, "ma": 0, "seasonal_ar": 0, "seasonal_ma": 0, "reduced_ar": 5, "reduced_ma": 0, "exog_variance": 0, "measurement_variance": 0, "variance": 1}, "rmse": 38.30445436581283, "mae": 27.40195204562092, "r2": -0.26563233734329295}

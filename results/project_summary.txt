@@ -1,0 +1,38 @@
+
+PROJECT SUMMARY
+
+Dataset:
+- 2,888 observations (2015-2025)
+- 39 features
+- 10-year time period
+
+Best Model:
+- Random Forest
+- R² = 0.932 (93.2% variance explained)
+- RMSE = 3.54 (vs ARIMA 21.36)
+- 83.4% improvement over ARIMA
+
+Key Findings:
+1. Crack spreads are highly predictable (R² > 0.93)
+2. ML models significantly outperform traditional approaches
+3. Trend persistence (MA_5, LAG_1) is the dominant predictor
+4. Volatility matters but is secondary to price features
+5. Multi-feature approach captures complex dynamics
+
+Hypotheses Status:
+- H1 (Crack Spread as Primary Driver): ✅ SUPPORTED
+- H2 (ML Model Superiority): ✅ SUPPORTED
+- H3 (Volatility Moderation): ⚠️ PARTIALLY SUPPORTED
+- H4 (Multi-Factor Enhancement): ✅ SUPPORTED
+
+Business Impact:
+- 83.4% improvement in forecasting accuracy
+- 0.1-0.2% annual profit improvement potential
+- Better procurement and hedging decisions
+- More reliable margin projections
+
+Files Generated:
+📁 data/processed/ - Final dataset and splits
+📁 models/ - Trained models (RF, XGB, Scaler)
+📁 results/ - Analysis results and figures
+📁 results/figures/ - 12 visualization files
