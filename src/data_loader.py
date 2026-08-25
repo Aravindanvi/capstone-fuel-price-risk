@@ -11,7 +11,7 @@ class DataLoader:
     """
     A class to load economic and energy data from FRED and EIA APIs.
     """
-    
+
     def __init__(self):
         """Initialize the DataLoader with API credentials."""
         self.fred = Fred(api_key=os.environ.get('FRED_API_KEY'))
@@ -20,7 +20,7 @@ class DataLoader:
     def load_fred_data(self):
         """
         Load key economic and energy price data from FRED.
-        
+
         Returns:
             dict: Dictionary of pandas Series for each FRED series
         """
@@ -48,7 +48,7 @@ class DataLoader:
     def load_eia_data(self):
         """
         Load energy data from the EIA API.
-        
+
         Returns:
             dict: Dictionary of pandas Series for each EIA series
         """
@@ -66,7 +66,7 @@ class DataLoader:
                 response = requests.get(url)
                 if response.status_code == 200:
                     data[name] = pd.Series(
-                        {datetime.strptime(d[0], '%Y-%m-%d'): float(d[1]) 
+                        {datetime.strptime(d[0], '%Y-%m-%d'): float(d[1])
                          for d in response.json()['series'][0]['data']}
                     ).sort_index()
                     print(f"  ✅ {name}: {len(data[name])} observations")
@@ -81,7 +81,7 @@ class DataLoader:
     def load_all_data(self):
         """
         Load and combine all data sources.
-        
+
         Returns:
             dict: Dictionary containing FRED and EIA data
         """
@@ -97,7 +97,7 @@ class DataLoader:
 
         # Combine data - only include EIA data that loaded successfully
         all_data = {**fred_data}
-        
+
         # Only add EIA data if it's not empty
         for name, series in eia_data.items():
             if not series.empty:
@@ -108,7 +108,7 @@ class DataLoader:
 
         # Clean data
         df = df.dropna(how='all')
-        
+
         # Ensure index is DatetimeIndex
         if not isinstance(df.index, pd.DatetimeIndex):
             try:
