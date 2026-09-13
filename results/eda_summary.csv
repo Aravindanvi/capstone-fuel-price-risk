@@ -1,15 +1,15 @@
 ,Dataset Info,Target Variable (Crack Spread),Outliers
-Observations,10686,,
+Observations,10700,,
 Features,39,,
-Date Range,1986-01-03 00:00:00 to 2026-08-24 00:00:00,,
+Date Range,1986-01-03 00:00:00 to 2026-09-10 00:00:00,,
 Missing Values,502,,
-Mean,,92.6020544637844,
-Median,,78.54599999999999,
-Std Dev,,38.10595341691258,
+Mean,,92.80168822429907,
+Median,,78.59400000000002,
+Std Dev,,38.47868196506678,
 Min,,30.798,
 Max,,290.112,
-Skewness,,1.2328235746443408,
-Kurtosis,,1.4790658526943319,
-Total Outliers,,,215
-Percentage,,,2.01%
+Skewness,,1.261990182142265,
+Kurtosis,,1.6011278915023053,
+Total Outliers,,,227
+Percentage,,,2.12%
 Extreme Outliers,,,1

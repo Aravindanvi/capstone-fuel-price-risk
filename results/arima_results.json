@@ -1,1 +1,1 @@
-{"model": "ARIMA", "order": {"trend": 0, "exog": 0, "ar": 5, "ma": 0, "seasonal_ar": 0, "seasonal_ma": 0, "reduced_ar": 5, "reduced_ma": 0, "exog_variance": 0, "measurement_variance": 0, "variance": 1}, "rmse": 49.603140260383974, "mae": 37.07166820586544, "r2": -0.9517747282234921}
+{"model": "ARIMA", "order": {"trend": 0, "exog": 0, "ar": 5, "ma": 0, "seasonal_ar": 0, "seasonal_ma": 0, "reduced_ar": 5, "reduced_ma": 0, "exog_variance": 0, "measurement_variance": 0, "variance": 1}, "rmse": 48.353174387140065, "mae": 35.34452794290279, "r2": -0.7685152668324986}
